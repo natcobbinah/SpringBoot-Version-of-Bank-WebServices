@@ -10,27 +10,31 @@ import com.nat.bank.entities.Operation;
 
 public interface bankService {
 
-List<Bankaccount> getBankAccounts();
+	List<Bankaccount> getBankAccounts();
 	
+	Bankaccount getBackAccount(int accountNum);
+
 	void addBankAccount(Bankaccount bankaccount);
-	
+
 	List<Client> getClients();
 	
+	Client getClient(int id);
+
 	void addClient(Client client);
-	
+
 	List<Operation> getOperations();
-	
+
 	void addOperation(Operation operation);
-	
-	List<Operation> getAllTransactions(String type,Date datefrom, Date dateto);
-	
-	List<Bankaccount> listAllAccounts(int accountNumber);
-	
+
+	List<Operation> getAllTransactions(String type, Date datefrom, Date dateto);
+
+	List<Bankaccount> listAllAccounts(int clientId);
+
 	boolean closeAccount(int number);
-	 
+
 	boolean deposit(BigDecimal amount, int accountNumber);
-	
+
 	boolean withdraw(BigDecimal amount, int accountNumber);
-	
-	boolean transfer(BigDecimal amount,int accountNumber1, int accountNumber2);
+
+	boolean transfer(BigDecimal amount, int accountNumber1, int accountNumber2);
 }

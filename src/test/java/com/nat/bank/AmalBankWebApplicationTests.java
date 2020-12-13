@@ -60,9 +60,9 @@ class AmalBankWebApplicationTests {
 		Bankaccount account = new Bankaccount();
 		account.setAccountStatus("ACTIVE");
 		account.setCreatedAt(new Date());
-		account.setBalance(new BigDecimal(345));
-		account.setClientID(2);
-		account.setAccountNumber(00005);
+		account.setBalance(new BigDecimal(700));
+		account.setClientID(1);
+		account.setAccountNumber(00007);
 		bankRepository.save(account);
 	}
 	
